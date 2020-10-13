@@ -19,7 +19,6 @@
 
 <% model_listings = Array.new %>
 <% @provinces.each do |province|%>
-  <h4><%= link_to province.name.humanize, province.name %></h4>
   <ul>
   <% @listings.each do |listing| %>
 

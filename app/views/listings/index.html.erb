@@ -17,6 +17,14 @@
     <strong>Total number of listings from BC to Ontario: </strong>
     <%= @count %>
   </p>
+  <h1>Makes</h1>
+  <% @makes.each do |make| %>
+    <h3><%=link_to make.name.humanize, make%></h3>
+  <% end %>
+  <h1>Models</h1>
+  <% @models.each do |model| %>
+    <h3><%=link_to model.name.humanize, model%></h3>
+  <% end %>
   <h2>Listings:</h2>
 
   <div class="container bg-secondary">
@@ -44,7 +52,7 @@
     </p>
     <p>
       <strong>Location: </strong>
-      <%= listing.province.name.humanize %>
+      <%= listing.location.humanize %>
     </p>
     <p>
       <strong>Link to car: </strong>
