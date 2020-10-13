@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
+  <a class="navbar-brand" href="/listings/index"><strong>Super Sweet Japanese Tuner Cars For Sale</strong></a>
+
+   <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+    </ul>
+
+  <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline'} do |f| %>
+    <%= f.input :title, class: "form-control mr-sm-2", input_html: {value: ""} %>
+    <%= f.submit "Search", class: "btn btn-secondary my-2 my-sm-0" %>
+  <% end %>
+</nav>
+<div class="container-fluid bg-light">
+<h1>Makes</h1>
+
+  <% @makes.each do |make| %>
+    <h3><%=link_to make.name.humanize, make%></h3>
+
+  <% end %>
+  </div>

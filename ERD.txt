@@ -1,0 +1,28 @@
+Plan #1
+I plan on scraping the internet for late 80's,
+early 90's import cars that are for sale to aggregate
+the car listings into 1 spot so it's easier for me to shop.
+
+Plan #2
+I would use the Magic: The Gathering dataset to organize
+cards into sets and colours
+
+I plan to have a database with the main table being called:
+
+car listing:
+Title:           varchar
+Make:            varchar         FK
+Model:           varchar         FK
+URL:             varchar
+Price:           float
+Desription:      text
+Location:        varchar
+image_url:       varchar
+
+
+
+Make:
+Name:            varchar         PK, FK
+
+Model:
+Name:            varchar         PK, FK
